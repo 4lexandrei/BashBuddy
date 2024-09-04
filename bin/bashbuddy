@@ -1,0 +1,23 @@
+#!/bin/bash
+# bashbuddy - Main entry script
+
+check_path() {
+    if [ ! -L "$0" ]; then
+        # If path is no symlink
+        BASHBUDDY_PATH="$(dirname "$0")/.."
+    else
+        if command -v readlink > /dev/null; then
+        # If readlink is available, follow symlink
+            BASHBUDDY_PATH="$(dirname "$(realpath "$0")")/.."
+        fi
+    fi
+}
+
+check_path
+
+execute() {
+    local path="$BASHBUDDY_PATH/main.sh"
+    bash $path
+}
+
+execute
