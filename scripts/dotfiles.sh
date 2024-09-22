@@ -3,7 +3,7 @@
 DOTFILES_DIR="$DOTFILES_DIRECTORY"
 
 run_script() {
-  scripts=($(find "$DOTFILES_DIR" -type f -name "*.sh" -executable))
+  scripts=($(find "$DOTFILES_DIR"/setup -type f -name "*.sh" -executable))
 
   clear
 
