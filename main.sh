@@ -38,13 +38,13 @@ show_menu() {
 
   case $choice in
   *"Run Script Manager"*)
-    bash "$SCRIPTS_DIR/script_runner.sh"
+    bash "$SCRIPTS_DIR"/script_runner.sh
     ;;
   *"Pacman Utility"*)
-    bash "$SCRIPTS_DIR/pacman.sh"
+    bash "$SCRIPTS_DIR"/pacman.sh
     ;;
   *"Dotfiles"*)
-    bash "$SCRIPTS_DIR/dotfiles.sh"
+    bash "$SCRIPTS_DIR"/dotfiles.sh
     ;;
   *"Exit"*)
     exit 0 &
